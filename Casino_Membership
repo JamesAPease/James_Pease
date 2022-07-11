@@ -1,0 +1,54 @@
+MyMain:
+
+package casino;
+
+public class MyMain {
+
+	public static void main(String[] args) {
+		Casino person1 = new Casino ("James",1,600);
+		
+		System.out.println("Available points: " +person1.getPoints());
+		person1.addPoint(200);
+		
+		System.out.println("Available points: " +person1.getPoints());
+		
+		person1.addPoint(500);
+		System.out.println("Available points: " +person1.getPoints());
+	}
+
+}
+
+
+
+Casino:
+
+package casino;
+
+public class Casino {
+	//data members
+	String data;
+	int membershipID;
+	int points;
+	
+	
+	//constructor
+	public Casino(String data, int membershipID, int points) {
+		super();
+		this.data = data;
+		this.membershipID = membershipID;
+		this.points = points;
+	}
+
+
+	public int getPoints() {
+		return points;
+	}
+	
+	public void addPoint(int num) {
+		points += num;
+		System.out.println("\n"+num + " points were added to account.");
+	}
+	
+	
+	
+}
