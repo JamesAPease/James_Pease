@@ -1,0 +1,142 @@
+Ch2 Projects.txt
+Who has access
+Not shared
+System properties
+Type
+Text
+Size
+3 KB
+Storage used
+3 KB
+Location
+MIS 388
+Owner
+me
+Modified
+Sep 21, 2020 by me
+Opened
+8:56 AM by me
+Created
+Nov 2, 2020 with Google Drive Web (Unverified)
+Add a description
+Viewers can download
+Project 1:
+package babylonian;
+
+import java.util.Scanner;
+
+public class babylonian {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner Scanner = new Scanner(System.in);
+		
+		double n;
+		double guess;
+		double r;
+		
+		System.out.print("Enter a value for n: ");
+		n = Scanner.nextDouble();
+		
+		guess = n / 2;
+		
+		r = n / guess;			
+		guess = (guess + r) / 2.0;
+		
+		r = n / guess;			
+		guess = (guess + r) / 2.0;
+		
+		r = n / guess;			
+		guess = (guess + r) / 2.0;
+		
+		r = n / guess;			
+		guess = (guess + r) / 2.0;
+		
+		r = n / guess;			
+		guess = (guess + r) / 2.0;
+		
+		System.out.printf("The square root of %.2f is approximately: %.2f\n", n, guess);
+	}
+
+}
+
+Project 2:
+package pigLatin;
+
+import java.util.*;
+public class PigLatin {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+ Scanner input=new Scanner(System.in);
+ String firstname,lastname,lower_first,lower_last,latin_first,latin_last;
+ System.out.println("Enter the First Name:");
+ firstname=input.next();
+ System.out.println("Enter the Last Name:");
+ lastname=input.next();
+ System.out.println("Full Name before PigLatin:"+ firstname+" "+ lastname);
+ 
+ lower_first=firstname.toLowerCase();
+ lower_last=lastname.toLowerCase();
+ 
+ latin_first=lower_first.substring(1,2).toUpperCase()+lower_first.substring(2)+lower_first.substring(0,1)+"ay";
+ latin_last=lower_last.substring(1,2).toUpperCase()+lower_last.substring(2)+lower_last.substring(0,1)+"ay";
+ 
+ System.out.println("Full Name after modifying PigLatin:"+ latin_first +" "+ latin_last);
+    }
+
+}
+
+Project 3:
+package division;
+import java.util.Scanner;
+public class Division {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner keyinput = new Scanner(System.in);
+		
+        System.out.print("Enter the first number: ");
+        int num1 = keyinput.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = keyinput.nextInt();
+        
+         
+        System.out.println("Dividend is: " + num1);
+        System.out.println("Divisor is: " + num2);
+        System.out.println("Quotient is: " + num1 / num2);
+        System.out.println("Remainder is: " + num1 % num2);
+		
+	}
+
+}
+
+Project 4:
+
+package consumption.rate;
+import java.util.Scanner;
+public class ConsumptionRate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner in = new Scanner(System.in);
+		
+        System.out.print("Enter the distance in miles: ");
+        float miles = in.nextFloat();
+		
+        System.out.print("Enter the miles per gallon: ");
+        float mpg = in.nextFloat();
+        
+        System.out.print("Enter the price per gallon: ");
+        float costPerGallon = in.nextFloat();
+        
+        float commuteCost = (miles / mpg) * costPerGallon;
+        
+        System.out.print("The commute cost is: $");
+        System.out.printf("%6.2f", commuteCost);
+	}
+
+}
