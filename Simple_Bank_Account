@@ -1,0 +1,52 @@
+MyMain:
+
+package bank_account;
+
+public class MyMain {
+
+	public static void main(String[] args) {
+		BankAccount checking = new BankAccount(50);
+		checking.deposit(20);
+		checking.withdraw(36.95);
+
+	}
+
+}
+
+
+
+BankAccount:
+
+package bank_account;
+
+public class BankAccount {
+
+	private double balance;
+	
+
+	public BankAccount(double balance) {
+		super();
+		this.balance = balance;
+		String strBalance = String.format("%.2f", this.balance);
+		System.out.println("Bank Account Created with a balance of $" + strBalance);
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+	
+	public void deposit(double num) {
+		balance = balance + num;
+		String strNum = String.format("%.2f", num);
+		String strBalance = String.format("%.2f", balance);
+		System.out.println("\nDepoist made. $" + strNum + " was added to your account.\nBalance is now: $" + strBalance);
+	}
+	
+	public void withdraw(double num) {
+		balance = balance - num;
+		String strBalance = String.format("%.2f", balance);
+		String strNum = String.format("%.2f", num);
+		System.out.println("\nYou have withdrawn $" + strNum + "\nBalance is now: $" + strBalance);
+	}
+
+}
