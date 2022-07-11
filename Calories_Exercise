@@ -1,0 +1,42 @@
+package calories;
+
+public class calories {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		double weightInPounds = 150;
+		double weightInKilo = weightInPounds/2.2;
+		double multiplier = 0.0175;
+		double runningMet = 10;
+		double basketballMet = 8;
+		double sleepingMet = 1;
+		int runningMin=30;
+		int basketballMin=30;
+		int sleepingMin=6*60;
+		
+		double runningCal = 0;
+		double basketballCal = 0;
+		double sleepingCal = 0;
+		
+		runningCal = multiplier * runningMet 
+				* weightInKilo * runningMin;
+		
+		basketballCal = multiplier * basketballMet 
+				* weightInKilo * basketballMin;
+		
+		sleepingCal = multiplier * sleepingMet 
+				* weightInKilo * sleepingMin;
+		
+		double totalCal = runningCal 
+				+ basketballCal 
+				+ sleepingCal;
+		
+				
+		System.out.println("Total Calories Burnt Running: " + runningCal);
+		System.out.println("Total Calories Burnt Basketball: " + basketballCal);
+		System.out.println("Total Calories Burnt Sleeping: " + sleepingCal);
+		System.out.println("Total Calories Burnt: " + totalCal);
+	}
+
+}
