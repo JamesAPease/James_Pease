@@ -1,0 +1,41 @@
+package kumonMath;
+
+import java.util.*;
+
+public class KumanMath {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		   Random rnd = new Random();
+
+	        Scanner sc = new Scanner(System.in);
+
+	        String choice = "";
+
+	        while (!choice.equals("no")) {
+
+	        int x = rnd.nextInt(101);
+
+	        int y = rnd.nextInt(101);
+	            
+	        System.out.println(x + "+" + y + "=");
+
+	        int n = sc.nextInt();
+
+	        if (n == (x + y)) {
+
+	        System.out.println("Your answer is correct!");
+
+	        } else {
+
+	        System.out.println("Your answer is wrong!");
+
+	        }
+
+	        System.out.println("Do you want to continue the exercise? ");
+
+	        choice = sc.next();
+	      }
+	}
+}
